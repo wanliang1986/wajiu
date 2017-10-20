@@ -1,0 +1,50 @@
+*{margin: 0px;padding: 0px}
+body{background-color:#ededed; }
+.left{float: left}
+.right{float: right}
+a{text-decoration: none;color: #333333}
+a:hover{text-decoration: none;color:#ef7e14}
+li{list-style-type: none}
+.clear{clear:both}
+/*header部分开始*/
+header{width: 100%;background-color: #ededed}
+.top{width: 1200px;height:25px;margin: 0 auto;font-size: 10px;line-height: 25px}
+.left li,.right li{margin-right:10px;float: left}
+.right li{position: relative}
+.end{width:175px;height:188px;background-color: white;border: 2px solid #ededed;border-top:none;position: absolute;top:25px;right:0px;display: none;z-index: 2}
+.end_1{width:170px;height: 91px;;border-bottom: 1px dashed;line-height: 15px}
+.end_2{width:170px;height:85px;line-height: 15px;margin-top: 10px}
+.right p{text-align: right}
+.right span{color: red}
+.logo{width: 100%;height:100px;line-height: 100px;background-color: white;padding-left: 100px;;box-sizing: border-box}
+/*form部分*/
+.middle_form{width: 100%;height:600px;margin:0 auto;background-image: url("../img/beijing.png");background-position: right;background-repeat: no-repeat;}
+.middle_form_1{width: 1200px;height:600px;margin: 0 auto}
+.form{margin-right: 40px;  width: 350px;background: #fff;float: right;margin-top: 120px;padding: 44px 24px;-webkit-box-shadow: 0 0 150px 8px rgba(0,0,0,.3);-moz-box-shadow:0 0 150px 8px rgba(0,0,0,.3);box-shadow: 0 0 150px 8px rgba(0,0,0,.3);position: relative;}
+.form_top{color:#838383;margin-bottom: 20px}
+.paw.active{color: #ef7e14;margin-right: 50px}
+input{width: 250px;height:44px;outline: none}
+.name,.paw,.pawsma{margin-bottom: 20px}
+#yanzheng{width: 150px;}
+#yanzheng1,#dongtai{width: 150px;}
+.yanzheng-img,.dongtai{width: 100px;height:44px;text-align: center;line-height: 44px;float: left;border:1px solid #999999}
+.btn-primary {color: #fff;background-color: #ef7e14;border-color: #ef7e14;}
+.btn-primary:focus { color: #fff;  background-color: #ef7e14;  border-color: #ef7e14;}
+.btn-primary:hover { color: #fff;background-color: #ef7e14;border-color: #ef7e14;}
+.btn-primary:active{  color: #fff;background-color: #ef7e14;border-color: #ef7e14;}
+.btn-primary:active:hover{color: #fff;background-color: #ef7e14;border-color: #ef7e14;}
+.form_footer{color:#838383;margin-top: 20px;}
+.paws{margin-right: 110px;margin-left: 30px;}
+#btn{height:40px;background-color: white;outline: none;border: none}
+/*footer部分开始*/
+footer{width: 100%}
+.footer_1{width: 100%;height:60px;background-color:#333333;line-height: 60px }
+.footer_1 li{display: inline-block;color:white;margin-right: 5px}
+.zhifu{text-align: right}
+.footer_2{width: 100%;height:280px;background-color: #333333;color:white;text-align: center}
+.footer_2 li{margin-top: 20px}
+.footer_list{text-align: left}
+.footer_list li{display: inline-block;font-size: 18px;margin-right: 30px}
+.footer_list a{color:white}
+.form_pho{display: none}
+

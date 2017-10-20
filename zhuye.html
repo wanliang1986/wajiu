@@ -1,0 +1,1785 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/swiper.min.css">
+    <link rel="stylesheet" href="css/zhuye.css">
+    <link rel="stylesheet" href="font/iconfont.css">
+    <script src="js/jquery-3.2.1.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/swiper.min.js"></script>
+    <script src="js/zhuye.js"></script>
+    <style>
+        .item{width: 740px;height:314px;
+        margin-left: 0;padding-top: 0px}
+        .carousel-indicators {
+            bottom: -10px;
+        }
+        .left_1{width:40px;height:30px;background-image: url("img/foot.png");background-position: left -6px;position: absolute;top:50%}
+        .right_1{width:40px;height:30px;background-image: url("img/foot.png");background-position: right -5px;position: absolute;top:50%;left:70px}
+        .carousel-indicators .active {
+            width: 60px;
+            height: 15px;
+            margin: 0;
+            background-color: #cccccc;
+            opacity: .5;
+        }
+        .carousel-indicators li {
+            display: inline-block;
+            width: 15px;
+            height: 15px;
+            margin: 1px;
+            text-indent: -999px;
+            cursor: pointer;
+            background-color: #000 \9;
+            background-color: rgba(0, 0, 0, 0);
+            border: 1px solid #fff;
+            border-radius: 10px;
+            color:black
+        }
+        .fix{
+            position: fixed;
+            right:2%;
+            top:30%
+        }
+        .fix li{width:55px;height:60px;text-align: center;margin-top: 10px;color:#999999}
+        .fix span{color:#ec971f;font-size: 10px;display: none}
+        .icon-weixin,.icon-huoche,.icon-fanhuidingbu{font-size: 40px;}
+        .icon-weixin:hover{
+            color:#ec971f;font-size:45px;transition: all .6s;
+        }
+        .fix a{color:#999999;text-decoration: none}
+        .fix li:nth-child(1):hover .span_1{display: block}
+        .fix li:nth-child(2):hover .span_2{display: block}
+        .fix li:nth-child(3):hover .span_3{display: block}
+        .icon-huoche:hover{
+            color:#ec971f;font-size:45px;transition: all .6s;
+        }
+        .icon-fanhuidingbu:hover{
+            color:#ec971f;font-size:45px;transition: all .6s;
+        }
+        .dis{display: none}
+    </style>
+</head>
+<body>
+    <div class="moban" style="display: none"> </div>
+    <header>
+        <div class="top">
+            <ul>
+                <li class="left">
+                    <ul>
+                        <li>您好！欢迎来到挖酒网</li>
+                        <li>|</li>
+                        <li><a href="denglu.html">请登录</a></li>
+                        <li>|</li>
+                        <li><a href="#">注册</a></li>
+                    </ul>
+                </li>
+                <li class="right">
+                    <ul>
+                        <li>客服热线：400-080-5959</li>
+                        <li><a href="#">在线客服</a></li>
+                        <li><a href="#">帮助中心</a></li>
+                        <li class="pos">
+                            <a href="#">
+                            <i class="icon iconfont icon-shouji"></i>
+                            手机挖酒
+                            <i class="icon iconfont icon-icon"></i>
+                            </a>
+                            <div class="end">
+                               <div class="end_1">
+                                   <div class="left">
+                                       <p>挖酒客户端</p>
+                                       <p>新用户赠样品卷</p>
+                                       <p><a href="#"><img src="img/top_logo.png" alt="#"></a></p>
+                                   </div>
+                                   <div class="left">
+                                       <img src="img/top_code_hong.jpg" alt="#">
+                                   </div>
+                               </div>
+                                <div class="end_2">
+                                    <div class="left">
+                                        <p>挖酒微信版</p>
+                                        <p><span>新用户赠样品卷</span></p>
+                                        <p>关注：<br>wajiupingtai</p>
+                                    </div>
+                                    <div class="left">
+                                        <img src="img/top_code_hei.jpg" alt="#">
+                                    </div>
+                                </div>
+                            </div>
+                        </li>
+                    </ul>
+                </li>
+            </ul>
+        </div>
+    </header>
+    <div class="search">
+        <div class="search_1">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-4"><img src="img/logo.jpg" alt="logo"></div>
+                    <div class="col-md-5">
+                        <div class="search_form">
+                            <input type="search" id="search" placeholder="热门搜索:无醇 小瓶 干白！">
+                            <div class="search-sumbit" id="sub">
+                                <i class="icon iconfont icon-sousuo" id="wl"></i>
+                            </div>
+                            <div class="search-list">
+                                <ul>
+                                    <li><a href="#"><span>预售</span></a></li>
+                                    <li><a href="#">杰克</a></li>
+                                    <li><a href="#"><span>活动商品</span></a></li>
+                                    <li><a href="#">阿尤</a></li>
+                                    <li><a href="#">凡度</a></li>
+                                    <li><a href="#">大宝</a></li>
+                                    <li><a href="#">瓦卡多</a></li>
+                                    <li><a href="#">范思哲</a></li>
+                                </ul>
+                            </div>
+                        </div>
+
+                    </div>
+                    <div class="col-md-2">
+                        <div class="buy">
+                            <i class="icon iconfont icon-truck" id="icon-truck"></i>
+                            我的购物车
+                            <span>0</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <nav>
+        <div class="nav_list">
+            <div class="nav_under left">
+                <p>
+                    <i class="icon iconfont icon-daohang"></i>
+                    <span><b>采购导航</b></span>
+                    <b><i class="icon iconfont icon-icon"></i></b>
+                </p>
+            </div>
+            <div class="nav_middle list-inline left">
+                <ul>
+                    <li><a href="#" style="color:#EF7E14">主页</a></li>
+                    <li><a href="#">葡萄酒</a></li>
+                    <li><a href="#">抢新品</a></li>
+                    <li><a href="#">名庄精品</a></li>
+                    <li><a href="../shijianping/qingcangjie.html">清仓街</a></li>
+                    <li><a href="#">OEM定制</a></li>
+                    <li><a href="#"style="color: red">商超专区
+                        <img src="img/sc-new2.png" alt="#" class="new"></a></li>
+                </ul>
+            </div>
+            <div class="nav_right list-inline right">
+                <ul>
+                    <li><a href="#">酒庄旅游</a></li>
+                    <li class="wajiu_ke"><a href="#">
+                        <img src="img/wajiuCourse-hot.png" alt="hot" class="hot">
+                        挖酒课程
+                        <i class="icon iconfont icon-f11"></i>
+                        <div class="nav_ke">
+                            <ul>
+                                <li style="border-bottom: 1px solid #999"><a href="#">WSET课程</a></li>
+                                <li><a href="#">波尔多课程</a></li>
+                            </ul>
+                        </div>
+                    </a>
+                    </li>
+                    <li><a href="#">挖酒金融</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    </div>
+    <div class="banner">
+        <div class="under_list">
+           <ul>
+               <li class="under_lis">
+                   <h4>热门推荐</h4>
+                   <ul class="nav_li">
+                       <li><a href="#">泊拉图</a></li>
+                       <li><a href="#">中级庄</a></li>
+                       <li><a href="#">凡度</a></li>
+                       <li><a href="#">阿拉曼</a></li>
+                       <li><a href="#">布拉沃</a></li>
+                       <li><a href="#">溪畔小屋</a></li>
+                   </ul>
+                   <div class="ul_right ul_1">
+                        <dl class="left">
+                            <dt>
+                                <i class="icon iconfont icon-shuxian type01"></i>
+                                法国
+                            </dt>
+                            <dd class="dd"><a href="#">李斯特</a></dd>
+                            <dd class="dd"><a href="#">大宝</a></dd>
+                            <dd class="dd"><a href="#">普乐</a></dd>
+                            <dd class="dd"><a href="#">1-20元</a></dd>
+                            <dd class="dd"><a href="#">21-30元</a></dd>
+                            <dd class="dd"><a href="#">31-50元</a></dd>
+                        </dl>
+                       <dl class="left">
+                           <dt>
+                               <i class="icon iconfont icon-shuxian type02"></i>
+                               法国
+                           </dt>
+                           <dd class="dd"><a href="#">李斯特</a></dd>
+                           <dd class="dd"><a href="#">大宝</a></dd>
+                           <dd class="dd"><a href="#">普乐</a></dd>
+                           <dd class="dd"><a href="#">1-20元</a></dd>
+                           <dd class="dd"><a href="#">21-30元</a></dd>
+                           <dd class="dd"><a href="#">31-50元</a></dd>
+                       </dl>
+                       <dl class="left">
+                           <dt>
+                               <i class="icon iconfont icon-shuxian type03"></i>
+                               法国
+                           </dt>
+                           <dd class="dd"><a href="#">李斯特</a></dd>
+                           <dd class="dd"><a href="#">大宝</a></dd>
+                           <dd class="dd"><a href="#">普乐</a></dd>
+                           <dd class="dd"><a href="#">1-20元</a></dd>
+                           <dd class="dd"><a href="#">21-30元</a></dd>
+                           <dd class="dd"><a href="#">31-50元</a></dd>
+                       </dl>
+                       <dl class="left">
+                           <dt>
+                               <i class="icon iconfont icon-shuxian type04"></i>
+                               法国
+                           </dt>
+                           <dd class="dd"><a href="#">李斯特</a></dd>
+                           <dd class="dd"><a href="#">大宝</a></dd>
+                           <dd class="dd"><a href="#">普乐</a></dd>
+                           <dd class="dd"><a href="#">1-20元</a></dd>
+                           <dd class="dd"><a href="#">21-30元</a></dd>
+                           <dd class="dd"><a href="#">31-50元</a></dd>
+                       </dl>
+                       <dl class="left">
+                           <dt>
+                               <i class="icon iconfont icon-shuxian type05"></i>
+                               法国
+                           </dt>
+                           <dd class="dd"><a href="#">李斯特</a></dd>
+                           <dd class="dd"><a href="#">大宝</a></dd>
+                           <dd class="dd"><a href="#">普乐</a></dd>
+                           <dd class="dd"><a href="#">1-20元</a></dd>
+                           <dd class="dd"><a href="#">21-30元</a></dd>
+                           <dd class="dd"><a href="#">31-50元</a></dd>
+                       </dl>
+                       <dl class="left"></dl>
+                       <dl class="left">
+                           <a href="#">
+                                <img src="img/1.jpg" alt="1">
+                           </a>
+                       </dl>
+                       <dl class="left">
+                           <a href="#">
+                               <img src="img/2.jpg" alt="1">
+                           </a>
+                       </dl>
+                   </div>
+               </li>
+               <li class="under_lis">
+                   <h4>葡萄酒</h4>
+                   <ul class="nav_li">
+                       <li><a href="#">泊拉图</a></li>
+                       <li><a href="#">中级庄</a></li>
+                       <li><a href="#">凡度</a></li>
+                       <li><a href="#">阿拉曼</a></li>
+                       <li><a href="#">布拉沃</a></li>
+                       <li><a href="#">溪畔小屋</a></li>
+                   </ul>
+                   <div class="ul_right ul_2">
+                       <dl class="left">
+                           <dt>
+                               <i class="icon iconfont icon-shuxian type01"></i>
+                               法国
+                           </dt>
+                           <dd class="dd"><a href="#">李斯特</a></dd>
+                           <dd class="dd"><a href="#">大宝</a></dd>
+                           <dd class="dd"><a href="#">普乐</a></dd>
+                           <dd class="dd"><a href="#">1-20元</a></dd>
+                           <dd class="dd"><a href="#">21-30元</a></dd>
+                           <dd class="dd"><a href="#">31-50元</a></dd>
+                       </dl>
+                       <dl class="left">
+                           <dt>
+                               <i class="icon iconfont icon-shuxian type02"></i>
+                               法国
+                           </dt>
+                           <dd class="dd"><a href="#">李斯特</a></dd>
+                           <dd class="dd"><a href="#">大宝</a></dd>
+                           <dd class="dd"><a href="#">普乐</a></dd>
+                           <dd class="dd"><a href="#">1-20元</a></dd>
+                           <dd class="dd"><a href="#">21-30元</a></dd>
+                           <dd class="dd"><a href="#">31-50元</a></dd>
+                       </dl>
+                       <dl class="left">
+                           <dt>
+                               <i class="icon iconfont icon-shuxian type03"></i>
+                               法国
+                           </dt>
+                           <dd class="dd"><a href="#">李斯特</a></dd>
+                           <dd class="dd"><a href="#">大宝</a></dd>
+                           <dd class="dd"><a href="#">普乐</a></dd>
+                           <dd class="dd"><a href="#">1-20元</a></dd>
+                           <dd class="dd"><a href="#">21-30元</a></dd>
+                           <dd class="dd"><a href="#">31-50元</a></dd>
+                       </dl>
+                       <dl class="left">
+                           <dt>
+                               <i class="icon iconfont icon-shuxian type04"></i>
+                               法国
+                           </dt>
+                           <dd class="dd"><a href="#">李斯特</a></dd>
+                           <dd class="dd"><a href="#">大宝</a></dd>
+                           <dd class="dd"><a href="#">普乐</a></dd>
+                           <dd class="dd"><a href="#">1-20元</a></dd>
+                           <dd class="dd"><a href="#">21-30元</a></dd>
+                           <dd class="dd"><a href="#">31-50元</a></dd>
+                       </dl>
+                       <dl class="left">
+                           <dt>
+                               <i class="icon iconfont icon-shuxian type05"></i>
+                               法国
+                           </dt>
+                           <dd class="dd"><a href="#">李斯特</a></dd>
+                           <dd class="dd"><a href="#">大宝</a></dd>
+                           <dd class="dd"><a href="#">普乐</a></dd>
+                           <dd class="dd"><a href="#">1-20元</a></dd>
+                           <dd class="dd"><a href="#">21-30元</a></dd>
+                           <dd class="dd"><a href="#">31-50元</a></dd>
+                       </dl>
+                       <dl class="left"></dl>
+                       <dl class="left">
+                           <a href="#">
+                               <img src="img/1.jpg" alt="1">
+                           </a>
+                       </dl>
+                       <dl class="left">
+                           <a href="#">
+                               <img src="img/2.jpg" alt="1">
+                           </a>
+                       </dl>
+                   </div>
+               </li>
+               <li class="under_lis">
+                   <h4>品质精选</h4>
+                   <ul class="nav_li">
+                       <li><a href="#">泊拉图</a></li>
+                       <li><a href="#">中级庄</a></li>
+                       <li><a href="#">凡度</a></li>
+                       <li><a href="#">阿拉曼</a></li>
+                       <li><a href="#">布拉沃</a></li>
+                       <li><a href="#">溪畔小屋</a></li>
+                   </ul>
+                   <div class="ul_right ul_3">
+                       <dl class="left">
+                           <dt>
+                               <i class="icon iconfont icon-shuxian type01"></i>
+                               法国
+                           </dt>
+                           <dd class="dd"><a href="#">李斯特</a></dd>
+                           <dd class="dd"><a href="#">大宝</a></dd>
+                           <dd class="dd"><a href="#">普乐</a></dd>
+                           <dd class="dd"><a href="#">1-20元</a></dd>
+                           <dd class="dd"><a href="#">21-30元</a></dd>
+                           <dd class="dd"><a href="#">31-50元</a></dd>
+                       </dl>
+                       <dl class="left">
+                           <dt>
+                               <i class="icon iconfont icon-shuxian type02"></i>
+                               法国
+                           </dt>
+                           <dd class="dd"><a href="#">李斯特</a></dd>
+                           <dd class="dd"><a href="#">大宝</a></dd>
+                           <dd class="dd"><a href="#">普乐</a></dd>
+                           <dd class="dd"><a href="#">1-20元</a></dd>
+                           <dd class="dd"><a href="#">21-30元</a></dd>
+                           <dd class="dd"><a href="#">31-50元</a></dd>
+                       </dl>
+                       <dl class="left">
+                           <dt>
+                               <i class="icon iconfont icon-shuxian type03"></i>
+                               法国
+                           </dt>
+                           <dd class="dd"><a href="#">李斯特</a></dd>
+                           <dd class="dd"><a href="#">大宝</a></dd>
+                           <dd class="dd"><a href="#">普乐</a></dd>
+                           <dd class="dd"><a href="#">1-20元</a></dd>
+                           <dd class="dd"><a href="#">21-30元</a></dd>
+                           <dd class="dd"><a href="#">31-50元</a></dd>
+                       </dl>
+                       <dl class="left">
+                           <dt>
+                               <i class="icon iconfont icon-shuxian type04"></i>
+                               法国
+                           </dt>
+                           <dd class="dd"><a href="#">李斯特</a></dd>
+                           <dd class="dd"><a href="#">大宝</a></dd>
+                           <dd class="dd"><a href="#">普乐</a></dd>
+                           <dd class="dd"><a href="#">1-20元</a></dd>
+                           <dd class="dd"><a href="#">21-30元</a></dd>
+                           <dd class="dd"><a href="#">31-50元</a></dd>
+                       </dl>
+                       <dl class="left">
+                           <dt>
+                               <i class="icon iconfont icon-shuxian type05"></i>
+                               法国
+                           </dt>
+                           <dd class="dd"><a href="#">李斯特</a></dd>
+                           <dd class="dd"><a href="#">大宝</a></dd>
+                           <dd class="dd"><a href="#">普乐</a></dd>
+                           <dd class="dd"><a href="#">1-20元</a></dd>
+                           <dd class="dd"><a href="#">21-30元</a></dd>
+                           <dd class="dd"><a href="#">31-50元</a></dd>
+                       </dl>
+                       <dl class="left"></dl>
+                       <dl class="left">
+                           <a href="#">
+                               <img src="img/1.jpg" alt="1">
+                           </a>
+                       </dl>
+                       <dl class="left">
+                           <a href="#">
+                               <img src="img/2.jpg" alt="1">
+                           </a>
+                       </dl>
+                   </div>
+               </li>
+               <li class="under_lis">
+                   <h4>啤酒烈酒</h4>
+                   <ul class="nav_li">
+                       <li><a href="#">泊拉图</a></li>
+                       <li><a href="#">中级庄</a></li>
+                       <li><a href="#">凡度</a></li>
+                       <li><a href="#">阿拉曼</a></li>
+                       <li><a href="#">布拉沃</a></li>
+                       <li><a href="#">溪畔小屋</a></li>
+                   </ul>
+                   <div class="ul_right ul_4">
+                       <dl class="left">
+                           <dt>
+                               <i class="icon iconfont icon-shuxian type01"></i>
+                               法国
+                           </dt>
+                           <dd class="dd"><a href="#">李斯特</a></dd>
+                           <dd class="dd"><a href="#">大宝</a></dd>
+                           <dd class="dd"><a href="#">普乐</a></dd>
+                           <dd class="dd"><a href="#">1-20元</a></dd>
+                           <dd class="dd"><a href="#">21-30元</a></dd>
+                           <dd class="dd"><a href="#">31-50元</a></dd>
+                       </dl>
+                       <dl class="left">
+                           <dt>
+                               <i class="icon iconfont icon-shuxian type02"></i>
+                               法国
+                           </dt>
+                           <dd class="dd"><a href="#">李斯特</a></dd>
+                           <dd class="dd"><a href="#">大宝</a></dd>
+                           <dd class="dd"><a href="#">普乐</a></dd>
+                           <dd class="dd"><a href="#">1-20元</a></dd>
+                           <dd class="dd"><a href="#">21-30元</a></dd>
+                           <dd class="dd"><a href="#">31-50元</a></dd>
+                       </dl>
+                       <dl class="left">
+                           <dt>
+                               <i class="icon iconfont icon-shuxian type03"></i>
+                               法国
+                           </dt>
+                           <dd class="dd"><a href="#">李斯特</a></dd>
+                           <dd class="dd"><a href="#">大宝</a></dd>
+                           <dd class="dd"><a href="#">普乐</a></dd>
+                           <dd class="dd"><a href="#">1-20元</a></dd>
+                           <dd class="dd"><a href="#">21-30元</a></dd>
+                           <dd class="dd"><a href="#">31-50元</a></dd>
+                       </dl>
+                       <dl class="left">
+                           <dt>
+                               <i class="icon iconfont icon-shuxian type04"></i>
+                               法国
+                           </dt>
+                           <dd class="dd"><a href="#">李斯特</a></dd>
+                           <dd class="dd"><a href="#">大宝</a></dd>
+                           <dd class="dd"><a href="#">普乐</a></dd>
+                           <dd class="dd"><a href="#">1-20元</a></dd>
+                           <dd class="dd"><a href="#">21-30元</a></dd>
+                           <dd class="dd"><a href="#">31-50元</a></dd>
+                       </dl>
+                       <dl class="left">
+                           <dt>
+                               <i class="icon iconfont icon-shuxian type05"></i>
+                               法国
+                           </dt>
+                           <dd class="dd"><a href="#">李斯特</a></dd>
+                           <dd class="dd"><a href="#">大宝</a></dd>
+                           <dd class="dd"><a href="#">普乐</a></dd>
+                           <dd class="dd"><a href="#">1-20元</a></dd>
+                           <dd class="dd"><a href="#">21-30元</a></dd>
+                           <dd class="dd"><a href="#">31-50元</a></dd>
+                       </dl>
+                       <dl class="left"></dl>
+                       <dl class="left">
+                           <a href="#">
+                               <img src="img/1.jpg" alt="1">
+                           </a>
+                       </dl>
+                       <dl class="left">
+                           <a href="#">
+                               <img src="img/2.jpg" alt="1">
+                           </a>
+                       </dl>
+                   </div>
+               </li>
+               <li class="under_lis">
+                   <h4>酒周边</h4>
+                   <ul class="nav_li">
+                       <li><a href="#">泊拉图</a></li>
+                       <li><a href="#">中级庄</a></li>
+                       <li><a href="#">凡度</a></li>
+                       <li><a href="#">阿拉曼</a></li>
+                       <li><a href="#">布拉沃</a></li>
+                       <li><a href="#">溪畔小屋</a></li>
+                   </ul>
+                   <div class="ul_right ul_5">
+                       <dl class="left">
+                           <dt>
+                               <i class="icon iconfont icon-shuxian type01"></i>
+                               法国
+                           </dt>
+                           <dd class="dd"><a href="#">李斯特</a></dd>
+                           <dd class="dd"><a href="#">大宝</a></dd>
+                           <dd class="dd"><a href="#">普乐</a></dd>
+                           <dd class="dd"><a href="#">1-20元</a></dd>
+                           <dd class="dd"><a href="#">21-30元</a></dd>
+                           <dd class="dd"><a href="#">31-50元</a></dd>
+                       </dl>
+                       <dl class="left">
+                           <dt>
+                               <i class="icon iconfont icon-shuxian type02"></i>
+                               法国
+                           </dt>
+                           <dd class="dd"><a href="#">李斯特</a></dd>
+                           <dd class="dd"><a href="#">大宝</a></dd>
+                           <dd class="dd"><a href="#">普乐</a></dd>
+                           <dd class="dd"><a href="#">1-20元</a></dd>
+                           <dd class="dd"><a href="#">21-30元</a></dd>
+                           <dd class="dd"><a href="#">31-50元</a></dd>
+                       </dl>
+                       <dl class="left">
+                           <dt>
+                               <i class="icon iconfont icon-shuxian type03"></i>
+                               法国
+                           </dt>
+                           <dd class="dd"><a href="#">李斯特</a></dd>
+                           <dd class="dd"><a href="#">大宝</a></dd>
+                           <dd class="dd"><a href="#">普乐</a></dd>
+                           <dd class="dd"><a href="#">1-20元</a></dd>
+                           <dd class="dd"><a href="#">21-30元</a></dd>
+                           <dd class="dd"><a href="#">31-50元</a></dd>
+                       </dl>
+                       <dl class="left">
+                           <dt>
+                               <i class="icon iconfont icon-shuxian type04"></i>
+                               法国
+                           </dt>
+                           <dd class="dd"><a href="#">李斯特</a></dd>
+                           <dd class="dd"><a href="#">大宝</a></dd>
+                           <dd class="dd"><a href="#">普乐</a></dd>
+                           <dd class="dd"><a href="#">1-20元</a></dd>
+                           <dd class="dd"><a href="#">21-30元</a></dd>
+                           <dd class="dd"><a href="#">31-50元</a></dd>
+                       </dl>
+                       <dl class="left">
+                           <dt>
+                               <i class="icon iconfont icon-shuxian type05"></i>
+                               法国
+                           </dt>
+                           <dd class="dd"><a href="#">李斯特</a></dd>
+                           <dd class="dd"><a href="#">大宝</a></dd>
+                           <dd class="dd"><a href="#">普乐</a></dd>
+                           <dd class="dd"><a href="#">1-20元</a></dd>
+                           <dd class="dd"><a href="#">21-30元</a></dd>
+                           <dd class="dd"><a href="#">31-50元</a></dd>
+                       </dl>
+                       <dl class="left"></dl>
+                       <dl class="left">
+                           <a href="#">
+                               <img src="img/1.jpg" alt="1">
+                           </a>
+                       </dl>
+                       <dl class="left">
+                           <a href="#">
+                               <img src="img/2.jpg" alt="1">
+                           </a>
+                       </dl>
+                   </div>
+               </li>
+           </ul>
+       </div>
+        <div class="banner_box">
+            <div id="carousel-example-generic" class="carousel slide" data-ride="carousel">
+                <!-- Indicators -->
+                <ul class="carousel-indicators">
+                    <li data-target="#carousel-example-generic" data-slide-to="0" class="active"></li>
+                    <li data-target="#carousel-example-generic" data-slide-to="1"></li>
+                    <li data-target="#carousel-example-generic" data-slide-to="2"></li>
+                    <li data-target="#carousel-example-generic" data-slide-to="3"></li>
+                    <li data-target="#carousel-example-generic" data-slide-to="4"></li>
+                    <li data-target="#carousel-example-generic" data-slide-to="5"></li>
+                    <li data-target="#carousel-example-generic" data-slide-to="6"></li>
+                    <li data-target="#carousel-example-generic" data-slide-to="7"></li>
+                </ul>
+
+                <!-- Wrapper for slides -->
+                <div class="carousel-inner" role="listbox">
+                    <div class="item active">
+                        <img src="img/banner_1.jpg" alt="...">
+                        <div class="carousel-caption">
+                        </div>
+                    </div>
+                    <div class="item">
+                        <img src="img/banner_2.jpg" alt="...">
+                        <div class="carousel-caption">
+                        </div>
+                    </div>
+                    <div class="item">
+                        <img src="img/banner_3.jpg" alt="...">
+                        <div class="carousel-caption">
+                        </div>
+                    </div>
+                    <div class="item">
+                        <img src="img/banner_4.jpg" alt="...">
+                        <div class="carousel-caption">
+                        </div>
+                    </div>
+                    <div class="item">
+                        <img src="img/banner_5.jpg" alt="...">
+                        <div class="carousel-caption">
+                        </div>
+                    </div>
+                    <div class="item">
+                        <img src="img/banner_6.jpg" alt="...">
+                        <div class="carousel-caption">
+                        </div>
+                    </div>
+                    <div class="item">
+                        <img src="img/banner_7.jpg" alt="...">
+                        <div class="carousel-caption">
+                        </div>
+                    </div>
+                    <div class="item">
+                        <img src="img/banner_8.jpg" alt="...">
+                        <div class="carousel-caption">
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Controls -->
+                <a class="left carousel-control" href="#carousel-example-generic" role="button" data-slide="prev">
+                    <div class="left_1"></div>
+                </a>
+                <a class="right carousel-control" href="#carousel-example-generic" role="button" data-slide="next">
+                    <div class="right_1"></div>
+                </a>
+            </div>
+        <div class="banner_under">
+            <ul>
+                <li><a href="#"><img src="img/tu1.jpg" alt="1"></a></li>
+                <li style="margin-left: 6px"><a href="#"><img src="img/tu2.jpg" alt="1"></a></li>
+            </ul>
+        </div>    
+    </div>
+        <div class="banner_right">
+            <div class="fist">
+                <p class="left"><img src="img/tu3.jpg" alt="1"></p>
+                <p class="left">
+                    欢迎访问 <a href="#">挖酒网</a><br>
+                    <span>请登录</span>
+                </p>
+
+            </div>
+            <ul class="btn_1">
+                <li><a href="#">立即登录</a></li>
+                <li><a href="#">注册</a></li>
+                <li><a href="#">帮助中心</a></li>
+            </ul>
+            <div class="fist_middle">
+                <ul>
+                    <li><img src="img/kuaibao.png" alt="#"></li>
+                    <li><a href="#">分享|21世纪经济报道：跨境B2B的护城河...</a></li>
+                    <li><a href="#">挖酒网热情盖酷暑 送福利老客户与老...</a></li>
+                    <li><a href="#">外媒报道：2016年中国十大葡萄酒进...</a></li>
+                </ul>
+            </div>
+            <div class="fist_footer">
+                <div id="right-top1">
+                    <ul id="ul" style="top: 0px;">
+                        <li><a href="#">新到好货法国女爵酒庄博若莱新酒赶快去看看吧<span>点击查看</span></a></li>
+                        <li><a href="#">新到好货法国女爵酒庄博若莱新酒赶快去看看吧<span>点击查看</span></a></li>
+                        <li><a href="#">新到好货法国女爵酒庄博若莱新酒赶快去看看吧<span>点击查看</span></a></li>
+                        <li><a href="#">新到好货法国女爵酒庄博若莱新酒赶快去看看吧<span>点击查看</span></a></li>
+                        <li><a href="#">新到好货法国女爵酒庄博若莱新酒赶快去看看吧<span>点击查看</span></a></li>
+                        <li><a href="#">新到好货法国女爵酒庄博若莱新酒赶快去看看吧<span>点击查看</span></a></li>
+                        <li><a href="#">新到好货法国女爵酒庄博若莱新酒赶快去看看吧<span>点击查看</span></a></li>
+                        <li><a href="#">新到好货法国女爵酒庄博若莱新酒赶快去看看吧<span>点击查看</span></a></li>
+                        <li><a href="#">新到好货法国女爵酒庄博若莱新酒赶快去看看吧<span>点击查看</span></a></li>
+                        <li><a href="#">新到好货法国女爵酒庄博若莱新酒赶快去看看吧<span>点击查看</span></a></li>
+                    </ul>
+                    <script>
+                        var box=document.getElementById("right-top1");//获得id名为box的节点
+                        var ul = box.getElementsByTagName("ul")[0];//获得标签名为ul的节点
+                        ul.innerHTML = ul.innerHTML + ul.innerHTML;//ul的内容变成两份内容
+                        function gd()//封装函数gd()
+                        {
+                            ul.style.top = ul.offsetTop+-1+"px";//ul所定位的上外边距为ul的上外边距-1px
+                            if(ul.style.top == -210+"px")//如果ul的上外边距等于-210px时
+                            {ul.style.top = 0+"px"};//那么ul的上外边距赋值为0px
+                        }
+                        var bl = setInterval(gd,100);
+                        $("#ul").hover(
+                                function(){
+                                    clearInterval(bl);
+                                },
+                                function(){
+                                    bl = setInterval(gd,100);
+                                }
+                        )
+
+                    </script>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="conter">
+        <div class="conter_1">
+            <div class="fenlei">
+               <p>精品分类</p>
+               <ul>
+                   <li><a href="#">木箱酒</a></li>
+                   <li><a href="#">获奖酒</a></li>
+                   <li><a href="#">小瓶酒</a></li>
+                   <li><a href="#">高度推荐</a></li>
+                   <li><a href="#">1-20元</a></li>
+                   <li><a href="#">21-30元</a></li>
+                   <li><a href="#">31-50元</a></li>
+                   <li><a href="#">51-100元</a></li>
+               </ul>
+           </div>
+            <div class="fenlei">
+                <p>精品分类</p>
+                <ul>
+                    <li><a href="#">木箱酒</a></li>
+                    <li><a href="#">获奖酒</a></li>
+                    <li><a href="#">小瓶酒</a></li>
+                    <li><a href="#">高度推荐</a></li>
+                    <li><a href="#">1-20元</a></li>
+                    <li><a href="#">21-30元</a></li>
+                    <li><a href="#">31-50元</a></li>
+                    <li><a href="#">51-100元</a></li>
+                </ul>
+            </div>
+            <div class="fenlei">
+                <p>精品分类</p>
+                <ul>
+                    <li><a href="#">木箱酒</a></li>
+                    <li><a href="#">获奖酒</a></li>
+                    <li><a href="#">小瓶酒</a></li>
+                    <li><a href="#">高度推荐</a></li>
+                    <li><a href="#">1-20元</a></li>
+                    <li><a href="#">21-30元</a></li>
+                    <li><a href="#">31-50元</a></li>
+                    <li><a href="#">51-100元</a></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <div class="banner_1">
+        <img src="img/tu4.jpg" alt="4">
+    </div>
+    <div class="neirong">
+        <div class="fl">
+            <h3>抢新品</h3>
+        </div>
+        <p class="right"><a href="#">查看更多 <img src="img/jiantou.png" alt="#"></a></p>
+    </div>
+    <div class="lunbo">
+        <div class="lunbo_bigbox">
+            <div class="lunbo_box">
+              <ul>
+                  <li class="left">
+                      <div class="img left">
+                          <img src="img/jiu1.jpg" alt="1">
+                      </div>
+                      <div class="list left">
+                          <div class="list_top">
+                              <h3><a href="#">金雀花干红葡萄酒</a></h3>
+                              <p>高性价比西班牙佐餐酒！</p>
+                          </div>
+                          <p><img src="img/Spain.jpg" alt="#">日常餐酒VDM</p>
+                          <div class="list_footer">
+                              <div class="list_footer_1">
+                                <p>剩余抢购时间：<span>11天</span></p>
+                                <p>剩余包销次数：<span>72次</span></p>
+                              </div>
+                              <p class="right"><a href="#" class="btn btn-primary font18">请登录</a></p>
+                          </div>
+                      </div>
+                  </li>
+                  <li class="list_m left">
+                      <div class="img left">
+                          <img src="img/jiu2.jpg" alt="1">
+                      </div>
+                      <div class="list left">
+                          <div class="list_top">
+                              <h3><a href="#">金雀花干红葡萄酒</a></h3>
+                              <p>高性价比西班牙佐餐酒！</p>
+                          </div>
+                          <p><img src="img/Spain.jpg" alt="#">日常餐酒VDM</p>
+                          <div class="list_footer">
+                              <div class="list_footer_1">
+                                  <p>剩余抢购时间：<span>11天</span></p>
+                                  <p>剩余包销次数：<span>72次</span></p>
+                              </div>
+                              <p class="right"><a href="#" class="btn btn-primary font18">请登录</a></p>
+                          </div>
+                      </div>
+                  </li>
+                  <li class="left">
+                      <div class="img left">
+                          <img src="img/jiu3.jpg" alt="1">
+                      </div>
+                      <div class="list left">
+                          <div class="list_top">
+                              <h3><a href="#">金雀花干红葡萄酒</a></h3>
+                              <p>高性价比西班牙佐餐酒！</p>
+                          </div>
+                          <p><img src="img/Spain.jpg" alt="#">日常餐酒VDM</p>
+                          <div class="list_footer">
+                              <div class="list_footer_1">
+                                  <p>剩余抢购时间：<span>11天</span></p>
+                                  <p>剩余包销次数：<span>72次</span></p>
+                              </div>
+                              <p class="right"><a href="#" class="btn btn-primary font18">请登录</a></p>
+                          </div>
+                      </div>
+                  </li>
+                  <li class="list_m left">
+                      <div class="img left">
+                          <img src="img/jiu4.jpg" alt="1">
+                      </div>
+                      <div class="list left">
+                          <div class="list_top">
+                              <h3><a href="#">金雀花干红葡萄酒</a></h3>
+                              <p>高性价比西班牙佐餐酒！</p>
+                          </div>
+                          <p><img src="img/Spain.jpg" alt="#">日常餐酒VDM</p>
+                          <div class="list_footer">
+                              <div class="list_footer_1">
+                                  <p>剩余抢购时间：<span>11天</span></p>
+                                  <p>剩余包销次数：<span>72次</span></p>
+                              </div>
+                              <p class="right"><a href="#" class="btn btn-primary font18">请登录</a></p>
+                          </div>
+                      </div>
+                  </li>
+              </ul>
+            </div>
+            <div class="lunbo_box">
+                <ul>
+                    <li class="left">
+                        <div class="img left">
+                            <img src="img/jiu5.jpg" alt="1">
+                        </div>
+                        <div class="list left">
+                            <div class="list_top">
+                                <h3><a href="#">金雀花干红葡萄酒</a></h3>
+                                <p>高性价比西班牙佐餐酒！</p>
+                            </div>
+                            <p><img src="img/Spain.jpg" alt="#">日常餐酒VDM</p>
+                            <div class="list_footer">
+                                <div class="list_footer_1">
+                                    <p>剩余抢购时间：<span>11天</span></p>
+                                    <p>剩余包销次数：<span>72次</span></p>
+                                </div>
+                                <p class="right"><a href="#" class="btn btn-primary font18">请登录</a></p>
+                            </div>
+                        </div>
+                    </li>
+                    <li class="list_m left">
+                        <div class="img left">
+                            <img src="img/jiu6.jpg" alt="1">
+                        </div>
+                        <div class="list left">
+                            <div class="list_top">
+                                <h3><a href="#">金雀花干红葡萄酒</a></h3>
+                                <p>高性价比西班牙佐餐酒！</p>
+                            </div>
+                            <p><img src="img/Spain.jpg" alt="#">日常餐酒VDM</p>
+                            <div class="list_footer">
+                                <div class="list_footer_1">
+                                    <p>剩余抢购时间：<span>11天</span></p>
+                                    <p>剩余包销次数：<span>72次</span></p>
+                                </div>
+                                <p class="right"><a href="#" class="btn btn-primary font18">请登录</a></p>
+                            </div>
+                        </div>
+                    </li>
+                    <li class="left">
+                        <div class="img left">
+                            <img src="img/jiu7.jpg" alt="1">
+                        </div>
+                        <div class="list left">
+                            <div class="list_top">
+                                <h3><a href="#">金雀花干红葡萄酒</a></h3>
+                                <p>高性价比西班牙佐餐酒！</p>
+                            </div>
+                            <p><img src="img/Spain.jpg" alt="#">日常餐酒VDM</p>
+                            <div class="list_footer">
+                                <div class="list_footer_1">
+                                    <p>剩余抢购时间：<span>11天</span></p>
+                                    <p>剩余包销次数：<span>72次</span></p>
+                                </div>
+                                <p class="right"><a href="#" class="btn btn-primary font18">请登录</a></p>
+                            </div>
+                        </div>
+                    </li>
+                    <li class="list_m left">
+                        <div class="img left">
+                            <img src="img/jiu8.jpg" alt="1">
+                        </div>
+                        <div class="list left">
+                            <div class="list_top">
+                                <h3><a href="#">金雀花干红葡萄酒</a></h3>
+                                <p>高性价比西班牙佐餐酒！</p>
+                            </div>
+                            <p><img src="img/Spain.jpg" alt="#">日常餐酒VDM</p>
+                            <div class="list_footer">
+                                <div class="list_footer_1">
+                                    <p>剩余抢购时间：<span>11天</span></p>
+                                    <p>剩余包销次数：<span>72次</span></p>
+                                </div>
+                                <p class="right"><a href="#" class="btn btn-primary font18">请登录</a></p>
+                            </div>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <div class="dian">
+            <ul>
+                <li class="bg"></li>
+                <li></li>
+            </ul>
+        </div>
+        <a href="javascript:;" class="focus_l" title="上一张"></a>
+        <a href="javascript:;" class="focus_r" title="上一张"></a>
+    </div>
+    <div class="neirong_1">
+        <ul>
+            <li class="list_banner"><a href="#"><img src="img/tu_1.jpg" alt="#"></a></li>
+            <li class="list_li">
+                <div class="list_li_top">
+                    <a href="#"><img src="img/jiu_1.jpg" alt="#" class="suo"></a>
+                </div>
+                <div class="list_li_bottom">
+                    <p><a href="#">你的树 博若莱新酒</a></p>
+                    <p><span class="left">法国</span><span class="right">博若莱AOC</span></p>
+                    <p style="color:red">登录查看价格 <img src="img/xin.jpg" alt="#"></p>
+                </div>
+                <div class="org">
+                    One Two Three, One More Tree
+                </div>
+            </li>
+            <li class="list_li">
+                <div class="list_li_top">
+                    <a href="#"><img src="img/jiu_2.jpg" alt="#" class="suo"></a>
+                </div>
+                <div class="list_li_bottom">
+                    <p><a href="#">你的树 博若莱新酒</a></p>
+                    <p><span class="left">法国</span><span class="right">博若莱AOC</span></p>
+                    <p style="color:red">登录查看价格 <img src="img/xin.jpg" alt="#"></p>
+                </div>
+                <div class="org">
+                    One Two Three, One More Tree
+                </div>
+            </li>
+            <li class="list_li">
+                <div class="list_li_top">
+                    <a href="#"><img src="img/jiu_3.jpg" alt="#" class="suo"></a>
+                </div>
+                <div class="list_li_bottom">
+                    <p><a href="#">你的树 博若莱新酒</a></p>
+                    <p><span class="left">法国</span><span class="right">博若莱AOC</span></p>
+                    <p style="color:red">登录查看价格 <img src="img/xin.jpg" alt="#"></p>
+                </div>
+                <div class="org">
+                    One Two Three, One More Tree
+                </div>
+            </li>
+            <li class="list_li">
+                <div class="list_li_top">
+                    <a href="#"><img src="img/jiu_4.jpg" alt="#" class="suo"></a>
+                </div>
+                <div class="list_li_bottom">
+                    <p><a href="#">你的树 博若莱新酒</a></p>
+                    <p><span class="left">法国</span><span class="right">博若莱AOC</span></p>
+                    <p style="color:red">登录查看价格 <img src="img/xin.jpg" alt="#"></p>
+                </div>
+                <div class="org">
+                    One Two Three, One More Tree
+                </div>
+            </li>
+            <li class="list_li">
+                <div class="list_li_top">
+                    <a href="#"><img src="img/jiu_5.jpg" alt="#" class="suo"></a>
+                </div>
+                <div class="list_li_bottom">
+                    <p><a href="#">你的树 博若莱新酒</a></p>
+                    <p><span class="left">法国</span><span class="right">博若莱AOC</span></p>
+                    <p style="color:red">登录查看价格 <img src="img/xin.jpg" alt="#"></p>
+                </div>
+                <div class="org">
+                    One Two Three, One More Tree
+                </div>
+            </li>
+            <li class="list_li">
+                <div class="list_li_top">
+                    <a href="#"><img src="img/jiu_6.jpg" alt="#" class="suo"></a>
+                </div>
+                <div class="list_li_bottom">
+                    <p><a href="#">你的树 博若莱新酒</a></p>
+                    <p><span class="left">法国</span><span class="right">博若莱AOC</span></p>
+                    <p style="color:red">登录查看价格 <img src="img/xin.jpg" alt="#"></p>
+                </div>
+                <div class="org">
+                    One Two Three, One More Tree
+                </div>
+            </li>
+            <li class="list_li">
+                <div class="list_li_top">
+                    <a href="#"><img src="img/jiu_7.jpg" alt="#" class="suo"></a>
+                </div>
+                <div class="list_li_bottom">
+                    <p><a href="#">你的树 博若莱新酒</a></p>
+                    <p><span class="left">法国</span><span class="right">博若莱AOC</span></p>
+                    <p style="color:red">登录查看价格 <img src="img/xin.jpg" alt="#"></p>
+                </div>
+                <div class="org">
+                    One Two Three, One More Tree
+                </div>
+            </li>
+            <li class="list_li">
+                <div class="list_li_top">
+                    <a href="#"><img src="img/jiu_8.jpg" alt="#" class="suo"></a>
+                </div>
+                <div class="list_li_bottom">
+                    <p><a href="#">你的树 博若莱新酒</a></p>
+                    <p><span class="left">法国</span><span class="right">博若莱AOC</span></p>
+                    <p style="color:red">登录查看价格 <img src="img/xin.jpg" alt="#"></p>
+                </div>
+                <div class="org">
+                    One Two Three, One More Tree
+                </div>
+            </li>
+        </ul>
+    </div>
+    <div class="neirong_2">
+        <h3>爆款推荐</h3>
+        <div class="neirong_2_1">
+            <p class="left"><a href="#"><img src="img/nan_1.jpg" alt="1"></a></p>
+            <div class="neirong_2_ul">
+                <ul>
+                    <li class="list_li1">
+                        <div class="list_li_top">
+                            <a href="#"><img src="img/jiu_1.jpg" alt="#" class="suo"></a>
+                        </div>
+                        <div class="list_li_bottom">
+                            <p><a href="#">你的树 博若莱新酒</a></p>
+                            <p><span class="left">法国</span><span class="right">博若莱AOC</span></p>
+                            <p style="color:red">登录查看价格 <img src="img/xin.jpg" alt="#"></p>
+                        </div>
+                        <div class="org">
+                            One Two Three, One More Tree
+                        </div>
+                    </li>
+                    <li class="list_li1">
+                        <div class="list_li_top">
+                            <a href="#"><img src="img/jiu_2.jpg" alt="#" class="suo"></a>
+                        </div>
+                        <div class="list_li_bottom">
+                            <p><a href="#">你的树 博若莱新酒</a></p>
+                            <p><span class="left">法国</span><span class="right">博若莱AOC</span></p>
+                            <p style="color:red">登录查看价格 <img src="img/xin.jpg" alt="#"></p>
+                        </div>
+                        <div class="org">
+                            One Two Three, One More Tree
+                        </div>
+                    </li>
+                    <li class="list_li1">
+                        <div class="list_li_top">
+                            <a href="#"><img src="img/jiu_3.jpg" alt="#" class="suo"></a>
+                        </div>
+                        <div class="list_li_bottom">
+                            <p><a href="#">你的树 博若莱新酒</a></p>
+                            <p><span class="left">法国</span><span class="right">博若莱AOC</span></p>
+                            <p style="color:red">登录查看价格 <img src="img/xin.jpg" alt="#"></p>
+                        </div>
+                        <div class="org">
+                            One Two Three, One More Tree
+                        </div>
+                    </li>
+                    <li class="list_li1">
+                        <div class="list_li_top">
+                            <a href="#"><img src="img/jiu_4.jpg" alt="#" class="suo"></a>
+                        </div>
+                        <div class="list_li_bottom">
+                            <p><a href="#">你的树 博若莱新酒</a></p>
+                            <p><span class="left">法国</span><span class="right">博若莱AOC</span></p>
+                            <p style="color:red">登录查看价格 <img src="img/xin.jpg" alt="#"></p>
+                        </div>
+                        <div class="org">
+                            One Two Three, One More Tree
+                        </div>
+                    </li>
+                    <li class="list_li1">
+                        <div class="list_li_top">
+                            <a href="#"><img src="img/jiu_5.jpg" alt="#" class="suo"></a>
+                        </div>
+                        <div class="list_li_bottom">
+                            <p><a href="#">你的树 博若莱新酒</a></p>
+                            <p><span class="left">法国</span><span class="right">博若莱AOC</span></p>
+                            <p style="color:red">登录查看价格 <img src="img/xin.jpg" alt="#"></p>
+                        </div>
+                        <div class="org">
+                            One Two Three, One More Tree
+                        </div>
+                    </li>
+                    <li class="list_li1">
+                        <div class="list_li_top">
+                            <a href="#"><img src="img/jiu_6.jpg" alt="#" class="suo"></a>
+                        </div>
+                        <div class="list_li_bottom">
+                            <p><a href="#">你的树 博若莱新酒</a></p>
+                            <p><span class="left">法国</span><span class="right">博若莱AOC</span></p>
+                            <p style="color:red">登录查看价格 <img src="img/xin.jpg" alt="#"></p>
+                        </div>
+                        <div class="org">
+                            One Two Three, One More Tree
+                        </div>
+                    </li>
+                    <li class="list_li1">
+                        <div class="list_li_top">
+                            <a href="#"><img src="img/jiu_7.jpg" alt="#" class="suo"></a>
+                        </div>
+                        <div class="list_li_bottom">
+                            <p><a href="#">你的树 博若莱新酒</a></p>
+                            <p><span class="left">法国</span><span class="right">博若莱AOC</span></p>
+                            <p style="color:red">登录查看价格 <img src="img/xin.jpg" alt="#"></p>
+                        </div>
+                        <div class="org">
+                            One Two Three, One More Tree
+                        </div>
+                    </li>
+                    <li class="list_li1">
+                        <div class="list_li_top">
+                            <a href="#"><img src="img/jiu_8.jpg" alt="#" class="suo"></a>
+                        </div>
+                        <div class="list_li_bottom">
+                            <p><a href="#">你的树 博若莱新酒</a></p>
+                            <p><span class="left">法国</span><span class="right">博若莱AOC</span></p>
+                            <p style="color:red">登录查看价格 <img src="img/xin.jpg" alt="#"></p>
+                        </div>
+                        <div class="org">
+                            One Two Three, One More Tree
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <div class="neirong_2">
+        <h3>缤纷起泡</h3>
+        <div class="neirong_2_1">
+            <p class="left"><a href="#"><img src="img/nan_2.jpg" alt="1"></a></p>
+            <div class="neirong_2_ul">
+                <ul>
+                    <li class="list_li1">
+                        <div class="list_li_top">
+                            <a href="#"><img src="img/jiu_1.jpg" alt="#" class="suo"></a>
+                        </div>
+                        <div class="list_li_bottom">
+                            <p><a href="#">你的树 博若莱新酒</a></p>
+                            <p><span class="left">法国</span><span class="right">博若莱AOC</span></p>
+                            <p style="color:red">登录查看价格 <img src="img/xin.jpg" alt="#"></p>
+                        </div>
+                        <div class="org">
+                            One Two Three, One More Tree
+                        </div>
+                    </li>
+                    <li class="list_li1">
+                        <div class="list_li_top">
+                            <a href="#"><img src="img/jiu_2.jpg" alt="#" class="suo"></a>
+                        </div>
+                        <div class="list_li_bottom">
+                            <p><a href="#">你的树 博若莱新酒</a></p>
+                            <p><span class="left">法国</span><span class="right">博若莱AOC</span></p>
+                            <p style="color:red">登录查看价格 <img src="img/xin.jpg" alt="#"></p>
+                        </div>
+                        <div class="org">
+                            One Two Three, One More Tree
+                        </div>
+                    </li>
+                    <li class="list_li1">
+                        <div class="list_li_top">
+                            <a href="#"><img src="img/jiu_3.jpg" alt="#" class="suo"></a>
+                        </div>
+                        <div class="list_li_bottom">
+                            <p><a href="#">你的树 博若莱新酒</a></p>
+                            <p><span class="left">法国</span><span class="right">博若莱AOC</span></p>
+                            <p style="color:red">登录查看价格 <img src="img/xin.jpg" alt="#"></p>
+                        </div>
+                        <div class="org">
+                            One Two Three, One More Tree
+                        </div>
+                    </li>
+                    <li class="list_li1">
+                        <div class="list_li_top">
+                            <a href="#"><img src="img/jiu_4.jpg" alt="#" class="suo"></a>
+                        </div>
+                        <div class="list_li_bottom">
+                            <p><a href="#">你的树 博若莱新酒</a></p>
+                            <p><span class="left">法国</span><span class="right">博若莱AOC</span></p>
+                            <p style="color:red">登录查看价格 <img src="img/xin.jpg" alt="#"></p>
+                        </div>
+                        <div class="org">
+                            One Two Three, One More Tree
+                        </div>
+                    </li>
+                    <li class="list_li1">
+                        <div class="list_li_top">
+                            <a href="#"><img src="img/jiu_5.jpg" alt="#" class="suo"></a>
+                        </div>
+                        <div class="list_li_bottom">
+                            <p><a href="#">你的树 博若莱新酒</a></p>
+                            <p><span class="left">法国</span><span class="right">博若莱AOC</span></p>
+                            <p style="color:red">登录查看价格 <img src="img/xin.jpg" alt="#"></p>
+                        </div>
+                        <div class="org">
+                            One Two Three, One More Tree
+                        </div>
+                    </li>
+                    <li class="list_li1">
+                        <div class="list_li_top">
+                            <a href="#"><img src="img/jiu_6.jpg" alt="#" class="suo"></a>
+                        </div>
+                        <div class="list_li_bottom">
+                            <p><a href="#">你的树 博若莱新酒</a></p>
+                            <p><span class="left">法国</span><span class="right">博若莱AOC</span></p>
+                            <p style="color:red">登录查看价格 <img src="img/xin.jpg" alt="#"></p>
+                        </div>
+                        <div class="org">
+                            One Two Three, One More Tree
+                        </div>
+                    </li>
+                    <li class="list_li1">
+                        <div class="list_li_top">
+                            <a href="#"><img src="img/jiu_7.jpg" alt="#" class="suo"></a>
+                        </div>
+                        <div class="list_li_bottom">
+                            <p><a href="#">你的树 博若莱新酒</a></p>
+                            <p><span class="left">法国</span><span class="right">博若莱AOC</span></p>
+                            <p style="color:red">登录查看价格 <img src="img/xin.jpg" alt="#"></p>
+                        </div>
+                        <div class="org">
+                            One Two Three, One More Tree
+                        </div>
+                    </li>
+                    <li class="list_li1">
+                        <div class="list_li_top">
+                            <a href="#"><img src="img/jiu_8.jpg" alt="#" class="suo"></a>
+                        </div>
+                        <div class="list_li_bottom">
+                            <p><a href="#">你的树 博若莱新酒</a></p>
+                            <p><span class="left">法国</span><span class="right">博若莱AOC</span></p>
+                            <p style="color:red">登录查看价格 <img src="img/xin.jpg" alt="#"></p>
+                        </div>
+                        <div class="org">
+                            One Two Three, One More Tree
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <div class="neirong_3">
+        <h3>名庄精品</h3>
+        <div class="neirong_3_1">
+            <p class="left"><a href="#"><img src="img/nan_3.jpg" alt="#"></a></p>
+            <div class="neirong_3_ul">
+                <ul>
+                    <li class="list_li2"><a href="#"><img src="img/nan_4.jpg" alt=""></a></li>
+                    <li class="list_li1">
+                        <div class="list_li_top">
+                            <a href="#"><img src="img/jiu_5.jpg" alt="#" class="suo"></a>
+                        </div>
+                        <div class="list_li_bottom">
+                            <p><a href="#">你的树 博若莱新酒</a></p>
+                            <p><span class="left">法国</span><span class="right">博若莱AOC</span></p>
+                            <p style="color:red">登录查看价格 <img src="img/xin.jpg" alt="#"></p>
+                        </div>
+                        <div class="org">
+                            One Two Three, One More Tree
+                        </div>
+                    </li>
+                    <li class="list_li1">
+                        <div class="list_li_top">
+                            <a href="#"><img src="img/jiu_6.jpg" alt="#" class="suo"></a>
+                        </div>
+                        <div class="list_li_bottom">
+                            <p><a href="#">你的树 博若莱新酒</a></p>
+                            <p><span class="left">法国</span><span class="right">博若莱AOC</span></p>
+                            <p style="color:red">登录查看价格 <img src="img/xin.jpg" alt="#"></p>
+                        </div>
+                        <div class="org">
+                            One Two Three, One More Tree
+                        </div>
+                    </li>
+                    <li class="list_li1">
+                        <div class="list_li_top">
+                            <a href="#"><img src="img/jiu_7.jpg" alt="#" class="suo"></a>
+                        </div>
+                        <div class="list_li_bottom">
+                            <p><a href="#">你的树 博若莱新酒</a></p>
+                            <p><span class="left">法国</span><span class="right">博若莱AOC</span></p>
+                            <p style="color:red">登录查看价格 <img src="img/xin.jpg" alt="#"></p>
+                        </div>
+                        <div class="org">
+                            One Two Three, One More Tree
+                        </div>
+                    </li>
+                    <li class="list_li1">
+                        <div class="list_li_top">
+                            <a href="#"><img src="img/jiu_8.jpg" alt="#" class="suo"></a>
+                        </div>
+                        <div class="list_li_bottom">
+                            <p><a href="#">你的树 博若莱新酒</a></p>
+                            <p><span class="left">法国</span><span class="right">博若莱AOC</span></p>
+                            <p style="color:red">登录查看价格 <img src="img/xin.jpg" alt="#"></p>
+                        </div>
+                        <div class="org">
+                            One Two Three, One More Tree
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <div class="lunbo_2">
+        <h3>名酒庄</h3>
+        <div class="lunbo_2_left">
+            <div class="lunbo_2_1">
+                <div class="lunbo_2_n">
+                    <ul>
+                    <li>
+                        <div class="left"><img src="img/lubo_2_1.jpg" alt="1"></div>
+                        <div class="left">
+                            <h3><a href="#">万特纳</a></h3>
+                            <p><a href="#">葡萄园实行有机生产，已获得Te...</a></p>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="left"><img src="img/lunbo_2_2.jpg" alt="1"></div>
+                        <div class="left">
+                            <h3><a href="#">葡萄园酒庄</a></h3>
+                            <p><a href="#">西班牙歌萄源集团始于1551年...</a></p>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="left"><img src="img/lunbo_2_3.jpg" alt="1"></div>
+                        <div class="left">
+                            <h3><a href="#">毕克拉</a></h3>
+                            <p><a href="#">西班牙拉曼洽产区...</a></p>
+                        </div>
+                    </li>
+                </ul>
+                </div>
+                <div class="lunbo_2_n">
+                    <ul>
+                        <li>
+                            <div class="left"><img src="img/lubo_2_1.jpg" alt="1"></div>
+                            <div class="left">
+                                <h3><a href="#">斯卡拉戴酒庄</a></h3>
+                                <p><a href="#">斯卡拉戴，来自西班牙加泰罗尼亚...</a></p>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="left"><img src="img/lunbo_2_2.jpg" alt="1"></div>
+                            <div class="left">
+                                <h3><a href="#">万巴赫酒庄</a></h3>
+                                <p><a href="#">时尚，休闲，娱乐</a></p>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <div class="jiantou">
+                <ul>
+                    <li class="jiatou_left"><a href="#"></a></li>
+                    <li class="jiatou_right"><a href="#"></a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="lunbo_2_right">
+            <div class="lunbo_2_m" style="display: block">
+                <div class="lunbo_img">
+                    <img src="img/lunbo_1.jpg" alt="1">
+                </div>
+                <div class="lunbo_wenzi">
+                    <p>毕克拉酒庄由Luis Piqueras在阿曼萨于1915年建立，
+                        现在主要供应西班牙等欧洲市场。悠久的历史和数年如一日的品质，使得毕克拉酒庄成为国际有名的酒庄。</p>
+                </div>
+            </div>
+            <div class="lunbo_2_m">
+                <div class="lunbo_img">
+                    <img src="img/lunbo_2.jpg" alt="1">
+                </div>
+                <div class="lunbo_wenzi">
+                    <p>毕克拉酒庄由Luis Piqueras在阿曼萨于1915年建立，
+                        现在主要供应西班牙等欧洲市场。悠久的历史和数年如一日的品质，使得毕克拉酒庄成为国际有名的酒庄。</p>
+                </div>
+            </div>
+            <div class="lunbo_2_m">
+                <div class="lunbo_img">
+                    <img src="img/lunbo_3.jpg" alt="1">
+                </div>
+                <div class="lunbo_wenzi">
+                    <p>毕克拉酒庄由Luis Piqueras在阿曼萨于1915年建立，
+                        现在主要供应西班牙等欧洲市场。悠久的历史和数年如一日的品质，使得毕克拉酒庄成为国际有名的酒庄。</p>
+                </div>
+            </div>
+            <div class="lunbo_2_m">
+                <div class="lunbo_img">
+                    <img src="img/lunbo_4.jpg" alt="1">
+                </div>
+                <div class="lunbo_wenzi">
+                    <p>毕克拉酒庄由Luis Piqueras在阿曼萨于1915年建立，
+                        现在主要供应西班牙等欧洲市场。悠久的历史和数年如一日的品质，使得毕克拉酒庄成为国际有名的酒庄。</p>
+                </div>
+            </div>
+            <div class="lunbo_2_m">
+                <div class="lunbo_img">
+                    <img src="img/lunbo_5.jpg" alt="1">
+                </div>
+                <div class="lunbo_wenzi">
+                    <p>毕克拉酒庄由Luis Piqueras在阿曼萨于1915年建立，
+                        现在主要供应西班牙等欧洲市场。悠久的历史和数年如一日的品质，使得毕克拉酒庄成为国际有名的酒庄。</p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="neirong_4">
+        <div class="neirong_4_left">
+            <h3 class="left">啤酒</h3>
+            <span class="right"><a href="#">查看更多 <img src="img/jiantou.png" alt="1"></a></span>
+            <div class="clear"></div>
+            <div class="neirong_4_left_1">
+               <p class="left"><a href="#"><img src="img/pijiu1.jpg" alt="a"></a></p>
+                <div class="neirong_4_ul">
+                    <ul>
+                        <li class="list_li3">
+                            <div class="list_li2_top">
+                                <a href="#"><img src="img/pijiu2.jpg" alt="#" class="suo"></a>
+                            </div>
+                            <div class="list_li2_bottom">
+                                <p><a href="#">你的树 博若莱新酒</a></p>
+                                <p><span class="left">法国</span><span class="right">博若莱AOC</span></p>
+                                <div class="clear"></div>
+                                <p style="color:red">登录查看价格 <img src="img/xin.jpg" alt="#"></p>
+                            </div>
+                            <div class="org1">
+                                One Two Three, One More Tree
+                            </div>
+                        </li>
+                        <li class="list_li3">
+                            <div class="list_li2_top">
+                                <a href="#"><img src="img/pijiu3.jpg" alt="#" class="suo"></a>
+                            </div>
+                            <div class="list_li2_bottom">
+                                <p><a href="#">你的树 博若莱新酒</a></p>
+                                <p><span class="left">法国</span><span class="right">博若莱AOC</span></p>
+                                <div class="clear"></div>
+                                <p style="color:red">登录查看价格 <img src="img/xin.jpg" alt="#"></p>
+                            </div>
+                            <div class="org1">
+                                One Two Three, One More Tree
+                            </div>
+                        </li>
+                        <li class="list_li3">
+                            <div class="list_li2_top">
+                                <a href="#"><img src="img/pijiu4.jpg" alt="#" class="suo"></a>
+                            </div>
+                            <div class="list_li2_bottom">
+                                <p><a href="#">你的树 博若莱新酒</a></p>
+                                <p><span class="left">法国</span><span class="right">博若莱AOC</span></p>
+                                <div class="clear"></div>
+                                <p style="color:red">登录查看价格 <img src="img/xin.jpg" alt="#"></p>
+                            </div>
+                            <div class="org1">
+                                One Two Three, One More Tree
+                            </div>
+                        </li>
+                        <li class="list_li3">
+                            <div class="list_li2_top">
+                                <a href="#"><img src="img/pijiu5.jpg" alt="#" class="suo"></a>
+                            </div>
+                            <div class="list_li2_bottom">
+                                <p><a href="#">你的树 博若莱新酒</a></p>
+                                <p><span class="left">法国</span><span class="right">博若莱AOC</span></p>
+                                <div class="clear"></div>
+                                <p style="color:red">登录查看价格 <img src="img/xin.jpg" alt="#"></p>
+                            </div>
+                            <div class="org1">
+                                One Two Three, One More Tree
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="neirong_4_right">
+            <h3 class="left">烈酒</h3>
+            <span class="right"><a href="#">查看更多 <img src="img/jiantou.png" alt="1"></a></span>
+            <div class="clear"></div>
+            <div class="neirong_4_left_1">
+                <p class="left"><a href="#"><img src="img/liejiu1.jpg" alt="a"></a></p>
+                <div class="neirong_4_ul">
+                    <ul>
+                        <li class="list_li3">
+                            <div class="list_li2_top">
+                                <a href="#"><img src="img/liejiu2.jpg" alt="#" class="suo"></a>
+                            </div>
+                            <div class="list_li2_bottom">
+                                <p><a href="#">你的树 博若莱新酒</a></p>
+                                <p><span class="left">法国</span><span class="right">博若莱AOC</span></p>
+                                <div class="clear"></div>
+                                <p style="color:red">登录查看价格 <img src="img/xin.jpg" alt="#"></p>
+                            </div>
+                            <div class="org1">
+                                One Two Three, One More Tree
+                            </div>
+                        </li>
+                        <li class="list_li3">
+                            <div class="list_li2_top">
+                                <a href="#"><img src="img/liejiu3.jpg" alt="#" class="suo"></a>
+                            </div>
+                            <div class="list_li2_bottom">
+                                <p><a href="#">你的树 博若莱新酒</a></p>
+                                <p><span class="left">法国</span><span class="right">博若莱AOC</span></p>
+                                <div class="clear"></div>
+                                <p style="color:red">登录查看价格 <img src="img/xin.jpg" alt="#"></p>
+                            </div>
+                            <div class="org1">
+                                One Two Three, One More Tree
+                            </div>
+                        </li>
+                        <li class="list_li3">
+                            <div class="list_li2_top">
+                                <a href="#"><img src="img/liejiu4.jpg" alt="#" class="suo"></a>
+                            </div>
+                            <div class="list_li2_bottom">
+                                <p><a href="#">你的树 博若莱新酒</a></p>
+                                <p><span class="left">法国</span><span class="right">博若莱AOC</span></p>
+                                <div class="clear"></div>
+                                <p style="color:red">登录查看价格 <img src="img/xin.jpg" alt="#"></p>
+                            </div>
+                            <div class="org1">
+                                One Two Three, One More Tree
+                            </div>
+                        </li>
+                        <li class="list_li3">
+                            <div class="list_li2_top">
+                                <a href="#"><img src="img/liejiu5.jpg" alt="#" class="suo"></a>
+                            </div>
+                            <div class="list_li2_bottom">
+                                <p><a href="#">你的树 博若莱新酒</a></p>
+                                <p><span class="left">法国</span><span class="right">博若莱AOC</span></p>
+                                <div class="clear"></div>
+                                <p style="color:red">登录查看价格 <img src="img/xin.jpg" alt="#"></p>
+                            </div>
+                            <div class="org1">
+                                One Two Three, One More Tree
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="zhoubian">
+        <h3 class="left">酒周边</h3>
+        <span class="right"><a href="#">查看更多 <img src="img/jiantou.png" alt="1"></a></span>
+        <div class="clear"></div>
+        <p class="left"><a href="#"><img src="img/zhoubian1.jpg" alt="#"></a></p>
+        <div class="zhoubian_1">
+            <ul>
+                <li class="list_li4">
+                    <div class="list_li4_top">
+                        <a href="#"><img src="img/zhoubian5.jpg" alt="#" class="suo"></a>
+                    </div>
+                    <div class="list_li4_bottom">
+                        <p><a href="#">你的树 博若莱新酒</a></p>
+                        <p><span class="left">法国</span><span class="right">博若莱AOC</span></p>
+                        <div class="clear"></div>
+                        <p style="color:red">登录查看价格 <img src="img/xin.jpg" alt="#"></p>
+                    </div>
+                    <div class="org2">
+                        One Two Three, One More Tree
+                    </div>
+                </li>
+                <li class="list_li4">
+                    <div class="list_li4_top">
+                        <a href="#"><img src="img/zhoubian3.jpg" alt="#" class="suo"></a>
+                    </div>
+                    <div class="list_li4_bottom">
+                        <p><a href="#">你的树 博若莱新酒</a></p>
+                        <p><span class="left">法国</span><span class="right">博若莱AOC</span></p>
+                        <div class="clear"></div>
+                        <p style="color:red">登录查看价格 <img src="img/xin.jpg" alt="#"></p>
+                    </div>
+                    <div class="org2">
+                        One Two Three, One More Tree
+                    </div>
+                </li>
+                <li class="list_li4">
+                    <div class="list_li4_top">
+                        <a href="#"><img src="img/zhoubian4.jpg" alt="#" class="suo"></a>
+                    </div>
+                    <div class="list_li4_bottom">
+                        <p><a href="#">你的树 博若莱新酒</a></p>
+                        <p><span class="left">法国</span><span class="right">博若莱AOC</span></p>
+                        <div class="clear"></div>
+                        <p style="color:red">登录查看价格 <img src="img/xin.jpg" alt="#"></p>
+                    </div>
+                    <div class="org2">
+                        One Two Three, One More Tree
+                    </div>
+                </li>
+                <li class="list_li4">
+                    <div class="list_li4_top">
+                        <a href="#"><img src="img/zhoubian5.jpg" alt="#" class="suo"></a>
+                    </div>
+                    <div class="list_li4_bottom">
+                        <p><a href="#">你的树 博若莱新酒</a></p>
+                        <p><span class="left">法国</span><span class="right">博若莱AOC</span></p>
+                        <div class="clear"></div>
+                        <p style="color:red">登录查看价格 <img src="img/xin.jpg" alt="#"></p>
+                    </div>
+                    <div class="org2">
+                        One Two Three, One More Tree
+                    </div>
+                </li>
+            </ul>
+        </div>
+    </div>
+    <footer>
+        <div class="footer_1">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-5">
+                        <ul>
+                            <li><img src="img/foot-flag.png" alt="f"></li>
+                            <li>境内站<i class="icon iconfont icon-f11"></i></li>
+                            <li>Copyright 2017 挖酒网 版权所有|京ICP备14007454号</li>
+                        </ul>
+                    </div>
+                    <div class="col-md-7 zhifu">
+                        <ul>
+                            <li>合作支付</li>
+                            <li><img src="img/zhifu.jpg" alt="1"></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="footer_2">
+            <div class=container>
+                <div class="row">
+                    <div class="col-md-12">
+                        <div class="col-md-1">
+                            <ul>
+                                <li><h5>购物指南</h5></li>
+                                <li>账户注册</li>
+                                <li>购物流程</li>
+                                <li>常见问题</li>
+                            </ul>
+                        </div>
+                        <div class="col-md-1">
+                            <ul>
+                                <li><h5>购物指南</h5></li>
+                                <li>账户注册</li>
+                                <li>购物流程</li>
+                                <li>常见问题</li>
+                            </ul>
+                        </div>
+                        <div class="col-md-1">
+                            <ul>
+                                <li><h5>购物指南</h5></li>
+                                <li>账户注册</li>
+                                <li>购物流程</li>
+                                <li>常见问题</li>
+                            </ul>
+                        </div>
+                        <div class="col-md-1">
+                            <ul>
+                                <li><h5>购物指南</h5></li>
+                                <li>账户注册</li>
+                                <li>购物流程</li>
+                                <li>常见问题</li>
+                            </ul>
+                        </div>
+                        <div class="col-md-4">
+                            <img src="img/erweima.jpg" alt="a">
+                        </div>
+                        <div class="col-md-4">
+                            <img src="img/phone.jpg" alt="a">
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-12 footer_list">
+                        <ul>
+                            <li>快捷入口：</li>
+                            <li><a href="#">挖酒商城</a></li>
+                            <li><a href="#">OEM定制</a></li>
+                            <li><a href="#">WEST培训</a></li>
+                            <li><a href="#">挖酒金融</a></li>
+                            <li><a href="#">高端服务</a></li>
+                            <li><a href="#">在线客服 <img src="img/foot-service.png" alt="1"></a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <div class="fix">
+        <ul>
+            <li>
+                <i class="icon iconfont icon-weixin"></i>
+                <span class="span_1">在线客服</span>
+            </li>
+            <li>
+                <i class="icon iconfont icon-huoche"></i>
+                <span class="span_2">购物车</span>
+            </li>
+            <li class="dis">
+                <a href="#"><i class="icon iconfont icon-fanhuidingbu"></i></a>
+                <span class="span_3">返回顶部</span>
+            </li>
+        </ul>
+    </div>
+
+</body>
+</html>
